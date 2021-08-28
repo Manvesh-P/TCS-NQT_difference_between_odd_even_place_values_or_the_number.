@@ -1,0 +1,22 @@
+# TCS-NQT difference between the sum of odd and even place values of the given number (consider position number starts from 1) 
+
+N = int(input("Enter the number:"))
+N1 = str(N)
+
+sum1 = 0
+sum2 = 0
+
+if len(N1) > 100:
+    print("Enter the number with lesser than or equal to 100 digits")
+else:
+    for i in range(0, len(N1), 2):
+        sum1 = sum1 + int(N1[i])
+        
+    for j in range(1, len(N1), 2):
+        sum2 = sum2 + int(N1[j])
+        
+if sum1 > sum2:
+    print(sum1 - sum2)
+else:
+    print(sum2 - sum1)
+        
